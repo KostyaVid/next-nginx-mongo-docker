@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: auth_server
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - 8080:80
+    environment:
+      NODE_ENV: production
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
