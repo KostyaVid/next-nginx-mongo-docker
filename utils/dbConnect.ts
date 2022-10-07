@@ -8,7 +8,6 @@ async function dbConnect() {
     return;
   }
 
-  console.log('Connecting db...', mongoose.connections[0]?.readyState);
   console.log(MONGODB_URI);
 
   try {
@@ -20,7 +19,6 @@ async function dbConnect() {
       //   useFindAndModify: false,
       // }
     );
-    console.log('Connected db', mongoose.connections[0]?.readyState);
   } catch (error) {
     console.log(error);
   }

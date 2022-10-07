@@ -6,7 +6,6 @@ Run the development server:
 
 ```bash
 docker-compose up -d --build
-
 npm run dev
 
 
